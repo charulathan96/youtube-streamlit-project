@@ -14,9 +14,9 @@ if not API_KEY:
 youtube = build("youtube", "v3", developerKey=API_KEY)
 
 
-# ------------------------------------------------
+
 # TASK 2 - Basic Channel Details
-# ------------------------------------------------
+
 def get_channel_details(channel_id):
     try:
         request = youtube.channels().list(
@@ -36,9 +36,8 @@ def get_channel_details(channel_id):
         return {"error": str(e)}
 
 
-# ------------------------------------------------
 # TASK 3 - Channel Extraction (Multiple)
-# ------------------------------------------------
+
 def extract_channel_details(channel_ids):
     data = []
 
@@ -75,9 +74,8 @@ def extract_channel_details(channel_ids):
     return pd.DataFrame(data)
 
 
-# ------------------------------------------------
 # TASK 5 - Video Metadata Extraction with Pagination
-# ------------------------------------------------
+
 def get_all_videos_metadata(channel_id):
     try:
         # Step 1: Get Upload Playlist ID
