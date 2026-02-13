@@ -38,9 +38,8 @@ with col2:
     fetch_videos = st.button("Fetch All Videos")
 
 
-# ----------------------------------------
 # Channel Data Display
-# ----------------------------------------
+
 if fetch_channel:
 
     if not channel_id or not is_valid_channel_id(channel_id):
@@ -82,9 +81,8 @@ if fetch_channel:
             st.markdown(f"**Channel Created On:** {snippet['publishedAt']}")
 
 
-# ----------------------------------------
 # Video Metadata Display
-# ----------------------------------------
+
 if fetch_videos:
 
     if not channel_id or not is_valid_channel_id(channel_id):
